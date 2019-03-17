@@ -32,7 +32,6 @@ body, html {
 
 #mainWrapper {
   width: 40vw;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
@@ -275,6 +274,7 @@ Button:hover {
 }
 
 #list > li:last-child{
+    border-bottom: none !important;
     padding-bottom: 0 !important;
 }
 
