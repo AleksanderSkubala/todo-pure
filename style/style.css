@@ -196,6 +196,30 @@ Button:hover {
     color: white;
 }
 
+.buttonCheck {
+    padding: 5px !important;
+
+    color: #FF851B;
+    border-color: #FF851B;
+}
+
+.buttonCheck:hover {
+    background: #FF851B;
+    color: white;
+}
+
+.buttonArrow {
+    color: #111111;
+    padding: 0 !important;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonArrow:hover {
+    color: #111111;
+    background: none;
+}
+
 #moreInfo {
     width: 100%;
     padding: 15px 20px;
@@ -247,8 +271,52 @@ Button:hover {
     border-bottom: .8px solid rgba(0,0,0, .19);
     box-sizing: border-box;
     font-size: .9em;
+    position: relative;
+}
+
+#list > li:last-child{
+    padding-bottom: 0 !important;
 }
 
 #list > li h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    color: #FF851B;
+    margin-top: 10px;
+}
+
+#list .buttonArrow {
+    height: 24px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+}
+
+#list .buttonCheck {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    height: 30px;
+    width: 30px;
+    box-sizing: content-box;
+
+    padding: 0 !important;
+    border-radius: 50%;
+}
+
+.addedinfo {
+    opacity: 1;
+    transform: scale(100%);
+    height: auto;
+    margin-top: 15px;
+}
+
+.hidden {
+    opacity: 0 !important;
+    transform: scale(0%) !important;
+    height: 0 !important;
+    margin-top: 0 !important;
 }

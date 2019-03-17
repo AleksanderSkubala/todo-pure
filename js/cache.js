@@ -22,7 +22,5 @@ function getData() {
     }
 
     var todo = JSON.parse(data);
-
-    console.log(todo);
     return todo.all;
 }

@@ -22,31 +22,55 @@ add.onclick = () => {
         const newTodo = [inputs[0].value, inputs[1].value, inputs[2].value];
         allTodos.push(newTodo);
         var obj = {'all': allTodos};
-        console.log(obj);
         push('todos', JSON.stringify(obj));
+        showData(getData());
     }
 };
 
+function arrow(index) {
+    const div = document.getElementsByClassName('addedinfo')[index];
+    div.classList.toggle('hidden');
+}
+
 function showData(data) {
     var list = document.querySelector('#list');
+    // list.innerHTML = '';
     var fragment = document.createDocumentFragment();
-    data.forEach( value =>{
-        var el = document.createElement('li');
 
-        var h1 = document.createElement('h1');
-        h1.innerHTML = value[0];
-        el.appendChild(h1);
-
-        var description = document.createElement('p');
-        description.innerHTML = value[1];
-        el.appendChild(description);
-
-        var date = document.createElement('p');
-        date.innerHTML = value[2];
-        el.appendChild(date);
-
-        fragment.appendChild(el);
+    data.forEach( (value,index) =>{
+        fragment.appendChild(createLi(value, index));
     });
+
     list.appendChild(fragment);
-    console.log(data);
+}
+
+function createLi(value, index) {
+    var el = document.createElement('li');
+
+    var btnCheck = document.createElement('button');
+    el.appendChild(btnCheck);
+    btnCheck.outerHTML = `<button class="buttonCheck" onclick="deleteEl(${index})"><i class="material-icons">check</i></button>`;
+
+    var h1 = document.createElement('h1');
+    h1.innerHTML = value[0];
+    el.appendChild(h1);
+
+    var btnArrow = document.createElement('button');
+    el.appendChild(btnArrow);
+    btnArrow.outerHTML = `<button class="buttonArrow" onclick="arrow(${index})"><i class="material-icons">keyboard_arrow_down</i></button>`;
+
+    var addedinfo = document.createElement('div');
+    addedinfo.className = 'addedinfo hidden';
+
+    var description = document.createElement('p');
+    description.innerHTML = value[1] ? '<b>Opis: </b>'+value[1] : '';
+    addedinfo.appendChild(description);
+
+    var date = document.createElement('p');
+    date.innerHTML = value[2] ? '<b>Termin: </b>'+value[2] : '';
+    addedinfo.appendChild(date);
+
+    el.appendChild(addedinfo);
+
+    return el;
 }
