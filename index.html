@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+
+    <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+    <div id="mainWrapper">
+        <Header>TODO</Header>
+        <div id="addWrapper">
+            <div id="inputWrapper">
+                <input class="input" type="text" name="title" placeholder="Zadanie"/>
+                <button id="buttonMore">
+                    <i class="material-icons">more_horiz</i>
+                </button>
+                <button class="buttonAdd">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+            <div id="moreInfo">
+                <div class="row">
+                    <input class="input" type="text" name="description" placeholder="Opis"/>
+                    <button class="buttonAdd">
+                        <i class="material-icons">check</i>
+                    </button>
+                </div>
+                <div class="row">
+                    <input class="input" type="date" name="date"/>
+                    <button class="buttonAdd">
+                        <i class="material-icons">check</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="list"></div>
+    </div>
+
+    <script src="js/cache.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
