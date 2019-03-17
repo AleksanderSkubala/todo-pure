@@ -46,7 +46,41 @@ body, html {
 @media screen and (max-width: 900px) {
 
     #mainWrapper {
-        width: 60vh;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #mainWrapper {
+        width: 100vw !important;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    #inputWrapper {
+        display: block !important;
+    }
+
+    #buttonMore, .buttonAdd {
+        height: 60%;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #mainWrapper {
+        width: 80vw;
+    }
+
+    #inputWrapper {
+        display: block !important;
+    }
+
+    #buttonMore, .buttonAdd {
+        height: 60%;
+        margin-top: 15px;
     }
 }
 
@@ -186,8 +220,35 @@ Button:hover {
     margin-top: 15px !important;
 }
 
+.far-far-away {
+    position: absolute;
+    left: -100%;
+}
+
 .row {
     width: 100%;
     display: flex;
     padding: 4px 0 !important;
+}
+
+#listContainer {
+    width: 100%;
+    padding: 15px;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#list > li {
+    padding: 10px;
+    border-bottom: .8px solid rgba(0,0,0, .19);
+    box-sizing: border-box;
+    font-size: .9em;
+}
+
+#list > li h1 {
+    font-size: 1.4em;
 }

@@ -11,11 +11,18 @@ function check() {
 function push(key, value) {
     if(check()) {
         window.localStorage.setItem(key, value);
-        box.innerHTML = window.localStorage.getItem(key);
     }
 }
 
-function initialGetData() {
-    const todos = window.localStorage.getItem('todos');
-    return todos;
+function getData() {
+    var data = window.localStorage.getItem('todos');
+    if(!data) {
+        push('todos', JSON.stringify({'all': []}));
+        data = window.localStorage.getItem('todos');
+    }
+
+    var todo = JSON.parse(data);
+
+    console.log(todo);
+    return todo.all;
 }
