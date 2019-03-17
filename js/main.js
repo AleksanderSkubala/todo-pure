@@ -1,6 +1,6 @@
 //onload
 check();
-let allTodos = getData();
+var allTodos = getData();
 showData(allTodos);
 
 
@@ -36,15 +36,18 @@ function arrow(index) {
 
 function deleteEl(index) {
     if(index===0) {
-        allTodos.slice(1);
+        allTodos.shift();
     } else if(index===allTodos.length-1) {
-        allTodos.slice(0, allTodos.length-2);
+        allTodos.pop()
     } else {
-        const arr1 = allTodos.slice(0, index);
-        const arr2 = allTodos.slice(index+1);
-        allTodos = arr1.concat(arr2);
+        var arr1 = allTodos.slice(0, index);
+        var arr2 = allTodos.slice(index+1);
+        allTodos = [].concat(arr1, arr2);
+        console.log(allTodos);
     }
 
+    var obj = {'all': allTodos};
+    push('todos', JSON.stringify(obj));
     showData(getData());
 }
 
