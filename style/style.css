@@ -67,7 +67,7 @@ body, html {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
     #mainWrapper {
         width: 80vw;
@@ -254,6 +254,14 @@ Button:hover {
     padding: 4px 0 !important;
 }
 
+#pomodoroWrapper {
+	border-bottom: .8px solid rgba(0,0,0, .19);
+}
+
+#pomodoroWrapper h3 {
+	color: #FF851B;
+}
+
 #listContainer {
     width: 100%;
     padding: 15px;
@@ -282,8 +290,7 @@ Button:hover {
 	max-width: 80%;
     font-size: 1.2em;
     color: #FF851B;
-    /* margin-top: 10px; */
-	margin: 10px auto 0 auto !important;
+	margin: 7px auto 0 auto !important;
 }
 
 #list .buttonArrow {
