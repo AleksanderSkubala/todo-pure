@@ -24,7 +24,10 @@ add.onclick = () => {
         var obj = {'all': allTodos};
         push('todos', JSON.stringify(obj));
 
-        inputs[0].value, inputs[1].value, inputs[2].value = '';
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '';
+		
         showData(getData());
     }
 };
