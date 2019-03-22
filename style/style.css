@@ -132,6 +132,10 @@ Button:hover {
     width: 100%;
 }
 
+#inputWrapper button:not(:last-child) {
+    margin-right: 10px;
+}
+
 .input {
     width: 100%;
     margin-right: 10px;
@@ -160,8 +164,6 @@ Button:hover {
 
 #buttonMore {
     padding: 0 !important;
-    margin-right: 10px;
-
     color: #39CCCC;
     border-color: #39CCCC;
 }
@@ -179,6 +181,17 @@ Button:hover {
 
 .buttonAdd:hover {
     background: #2ECC40;
+    color: white;
+}
+
+#buttonPomodoro {
+    padding: 0 !important;
+    color: #FF4136;
+    border-color: #FF4136;
+}
+
+#buttonPomodoro:hover {
+    background: #FF4136;
     color: white;
 }
 
@@ -254,12 +267,43 @@ Button:hover {
     padding: 4px 0 !important;
 }
 
+
 #pomodoroWrapper {
-	border-bottom: .8px solid rgba(0,0,0, .19);
+    border-bottom: .8px solid rgba(0,0,0, .19);
+    padding: 5px;
+    /* padding-bottom: 40px; */
+
+    transition: all .15s ease-in-out;
+    will-change: all;
+
+    opacity: 0;
+    transform: scale(0%);
+    height: 0;
+    margin-top: 0 !important;
 }
 
 #pomodoroWrapper h3 {
-	color: #FF851B;
+    color: #FF4136;
+    margin: 15px;
+}
+
+#pomodoroControl {
+    margin-bottom: 25px;
+}
+
+#pomodoroControl button i {
+    padding: 3px 7px;
+}
+
+#pomodoroControl button {
+    padding: 0;
+    color: #FF851B;
+    border-color: #FF851B;
+}
+
+#pomodoroControl button:hover {
+    background: #FF851B;
+    color: white;
 }
 
 #listContainer {
@@ -290,7 +334,7 @@ Button:hover {
 	max-width: 80%;
     font-size: 1.2em;
     color: #FF851B;
-	margin: 7px auto 0 auto !important;
+	margin: 10px auto 0 auto !important;
 }
 
 #list .buttonArrow {

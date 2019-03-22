@@ -6,6 +6,9 @@ showData(allTodos);
 
 var btnMore = document.querySelector('#buttonMore');
 var more = document.querySelector('#moreInfo');
+var btnPomodoro = document.querySelector('#buttonPomodoro');
+var timer = document.querySelector('#pomodoroWrapper');
+
 var add = document.getElementsByClassName('buttonAdd')[0];
 var checkDescription = document.getElementsByClassName('buttonAdd')[1];
 var checkDate = document.getElementsByClassName('buttonAdd')[2];
@@ -15,6 +18,12 @@ btnMore.onclick = ()=>{
     more.classList.toggle('showed');
     setTimeout(250);
     more.classList.toggle('far-far-away');
+};
+
+btnPomodoro.onclick = ()=>{
+    timer.classList.toggle('showed');
+    setTimeout(250);
+    timer.classList.toggle('far-far-away');
 };
 
 add.onclick = () => {
@@ -27,7 +36,7 @@ add.onclick = () => {
         inputs[0].value = '';
         inputs[1].value = '';
         inputs[2].value = '';
-		
+
         showData(getData());
     }
 };
