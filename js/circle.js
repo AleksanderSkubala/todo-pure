@@ -29,7 +29,7 @@ play.onclick = ()=>{
     interval = setInterval(function() {
       if(countdown <= 1) {
 	      clearInterval(interval);
-	      reset();
+	      resetFun();
 	      var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
               audio.play();
       }
@@ -42,8 +42,8 @@ play.onclick = ()=>{
   }
 };
 
-reset.onclick = reset();
-function reset(){
+reset.onclick = resetFun();
+function resetFun(){
   if(circle.style.webkitAnimationPlayState === "running") {
     circle.style.webkitAnimationPlayState = "paused";
 	
