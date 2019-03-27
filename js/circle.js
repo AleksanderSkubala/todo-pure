@@ -26,7 +26,11 @@ play.onclick = ()=>{
     pushText(countdown);
 
     interval = setInterval(function() {
-      if(countdown <= 1) clearInterval(interval);
+      if(countdown <= 1) {
+	      clearInterval(interval);
+	      var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
+              audio.play();
+      }
 
       countdown = --countdown <= 0 ? countdownInitial : countdown;
 	  
