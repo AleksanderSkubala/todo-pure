@@ -1,10 +1,11 @@
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdownInitial = 25*60;
+var countdownInitial = 15;
 var countdown = countdownInitial;
 
 var play = document.querySelector('#buttonStart');
 var reset = document.querySelector('#buttonReset');
 var circle = document.querySelector('#circle');
+circle.style.animation = `countdown ${countdownInitial}s linear`;
 var interval;
 var min, sec;
 
