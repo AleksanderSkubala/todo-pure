@@ -1,5 +1,5 @@
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdownInitial = 15;
+var countdownInitial = 25*60;
 var countdown = countdownInitial;
 
 var play = document.querySelector('#buttonStart');
@@ -29,6 +29,7 @@ play.onclick = ()=>{
     interval = setInterval(function() {
       if(countdown <= 1) {
 	      clearInterval(interval);
+	      reset();
 	      var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
               audio.play();
       }
@@ -41,7 +42,8 @@ play.onclick = ()=>{
   }
 };
 
-reset.onclick = ()=>{
+reset.onclick = reset();
+function reset(){
   if(circle.style.webkitAnimationPlayState === "running") {
     circle.style.webkitAnimationPlayState = "paused";
 	
@@ -52,5 +54,5 @@ reset.onclick = ()=>{
 	var newone = circle.cloneNode(true);
 	circle.parentNode.replaceChild(newone, circle);
   }
-};
+}
 
