@@ -1,5 +1,5 @@
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdownInitial = 25*60;
+var countdownInitial = 15;
 var countdown = countdownInitial;
 
 var play = document.querySelector('#buttonStart');
