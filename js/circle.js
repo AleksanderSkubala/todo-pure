@@ -17,6 +17,19 @@ function pushText(time) {
     countdownNumberEl.textContent = `${min}:${sec}`;
 }
 
+function resetFun(){
+  if(circle.style.webkitAnimationPlayState === "running") {
+    circle.style.webkitAnimationPlayState = "paused";
+	
+    clearInterval(interval);
+	countdown = countdownInitial;
+	pushText(countdown);
+	
+	var newone = circle.cloneNode(true);
+	circle.parentNode.replaceChild(newone, circle);
+  }
+}
+
 play.onclick = ()=>{
   circle = document.querySelector('#circle');
   if(circle.style.webkitAnimationPlayState === "paused") {
@@ -43,16 +56,3 @@ play.onclick = ()=>{
 };
 
 reset.onclick = resetFun();
-function resetFun(){
-  if(circle.style.webkitAnimationPlayState === "running") {
-    circle.style.webkitAnimationPlayState = "paused";
-	
-    clearInterval(interval);
-	countdown = countdownInitial;
-	pushText(countdown);
-	
-	var newone = circle.cloneNode(true);
-	circle.parentNode.replaceChild(newone, circle);
-  }
-}
-
