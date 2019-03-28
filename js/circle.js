@@ -54,4 +54,4 @@ play.onclick = ()=>{
   }
 };
 
-reset.onclick = resetFun();
+reset.onclick = () => {resetFun();};
