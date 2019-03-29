@@ -4,7 +4,7 @@ This is app to adding thing todo. I know that internet is full of apps like this
 
 ## How does it works?
 
-If you want to check this app, you can go [here](aleksanderskubala.github.io/todo-pure), or download install files in dir: todo-build => todo.apk is for android, todo-windows is for Windows.
+If you want to check this app, you can go [here](https://aleksanderskubala.github.io/todo-pure), or download install files in dir: todo-build => todo.apk is for android, todo-windows is for Windows.
 
 App is saving your todos in cache, so you can slose winodw and reopen.
 
