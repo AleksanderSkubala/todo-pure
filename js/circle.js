@@ -23,7 +23,7 @@ function resetFun(){
 	
     clearInterval(interval);
 	countdown = countdownInitial;
-	pushText(countdown);
+	pushText(countdown+1);
 	
 	var newone = circle.cloneNode(true);
 	circle.parentNode.replaceChild(newone, circle);
