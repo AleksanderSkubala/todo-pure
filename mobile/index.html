@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+
+    <link rel="stylesheet" href="style/circle.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+    <div id="mainWrapper">
+        <Header>TODO</Header>
+        <div id="addWrapper">
+            <div id="inputWrapper">
+                <input class="input" type="text" name="title" placeholder="Zadanie"/>
+                <Button id="buttonMore">
+                    <i class="material-icons">more_horiz</i>
+                </Button>
+                <Button class="buttonAdd">
+                    <i class="material-icons">add</i>
+                </Button>
+                <Button id="buttonPomodoro">
+                    <i class="material-icons">alarm</i>
+                </Button>
+            </div>
+            <div id="moreInfo" class="far-far-away">
+                <div class="row">
+                    <input class="input" type="text" name="description" placeholder="Opis"/>
+                </div>
+                <div class="row">
+                    <input class="input" type="date" name="date"/>
+                </div>
+            </div>
+        </div>
+		<div id="pomodoroWrapper" class="far-far-away">
+            <h3>Pomodoro Tracker</h3>
+            <div id="pomodoroControl">
+                <button id="buttonStart">
+                    <i class="material-icons">
+                        play_arrow
+                    </i>
+                </button>
+                <button id="buttonReset">
+                    <i class="material-icons">
+                        stop
+                    </i>
+                </button>
+            </div>
+            <div id="countdown">
+                <div id="countdown-number"></div>
+                <svg>
+                  <circle id="circle" r="18" cx="20" cy="20"></circle>
+                </svg>
+            </div>
+		</div>
+        <div id="listContainer">
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <script src="js/circle.js"></script>
+    <script src="js/cache.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../other/material.woff2') format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+#mainWrapper {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  text-align: center;
+
+  border: .5px solid rgba(0,0,0, .19);
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0px rgba(0,0,0, .25);
+}
+
+@media screen and (max-width: 900px) {
+
+    #mainWrapper {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #mainWrapper {
+        width: 100vw !important;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    #inputWrapper {
+        display: block !important;
+    }
+
+    #buttonMore, .buttonAdd {
+        height: 60%;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    #mainWrapper {
+        width: 80vw;
+    }
+
+    #inputWrapper {
+        display: block !important;
+    }
+
+    #buttonMore, .buttonAdd, #buttonPomodoro {
+        height: 60%;
+        margin-top: 15px;
+    }
+}
+
+Header {
+    font-weight: 800;
+    font-size: 1.55em;
+    color: #FF851B;
+    padding: 20px;
+
+    border-bottom: .5px solid rgba(0,0,0, .19);
+}
+
+Button {
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+
+    color: #0074D9;
+    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+
+    background: none;
+    border: 2px solid #0074D9;
+
+    transition: all .2s ease-in-out;
+    will-change: all;
+}
+
+Button:hover {
+    background: #0074D9;
+    color: white;
+}
+
+#addWrapper {
+    width: 100%;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: .5px solid rgba(0,0,0, .19);
+}
+
+#addWrapper *:not(input) {
+    padding: 4px 9px;
+}
+
+#inputWrapper {
+    display: flex;
+    width: 100%;
+}
+
+#inputWrapper button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.input {
+    width: 100%;
+    margin-right: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #111111;
+
+    border: none;
+    border-bottom: 2px solid #AAAAAA;
+    box-shadow: none;
+    outline: none;
+
+    transition: all .25s ease-in-out;
+    will-change: all;
+}
+
+.input:focus {
+    border-color: #FF851B;
+}
+
+.input::placeholder {
+    color: #AAAAAA;
+    font-weight: 600;
+}
+
+#buttonMore {
+    padding: 0 !important;
+    color: #39CCCC;
+    border-color: #39CCCC;
+}
+
+#buttonMore:hover {
+    background: #39CCCC;
+    color: white;
+}
+
+.buttonAdd {
+    padding: 0 !important;
+    color: #2ECC40;
+    border-color: #2ECC40;
+}
+
+.buttonAdd:hover {
+    background: #2ECC40;
+    color: white;
+}
+
+#buttonPomodoro {
+    padding: 0 !important;
+    color: #FF4136;
+    border-color: #FF4136;
+}
+
+#buttonPomodoro:hover {
+    background: #FF4136;
+    color: white;
+}
+
+.buttonCancel {
+    padding: 0 !important;
+    margin-left: 10px;
+
+    color: #FF4136;
+    border-color: #FF4136;
+}
+
+.buttonCancel:hover {
+    background: #FF4136;
+    color: white;
+}
+
+.buttonCheck {
+    padding: 5px !important;
+
+    color: #FF851B;
+    border-color: #FF851B;
+}
+
+.buttonCheck:hover {
+    background: #FF851B;
+    color: white;
+}
+
+.buttonArrow {
+    color: #111111;
+    padding: 0 !important;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonArrow:hover {
+    color: #111111;
+    background: none;
+}
+
+#moreInfo {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: .85em;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    transition: all .15s ease-in-out;
+    will-change: all;
+
+    opacity: 0;
+    transform: scale(0%);
+    height: 0;
+    margin-top: 0;
+}
+
+.showed{
+    opacity: 1 !important;
+    transform: scale(100%) !important;
+    height: auto !important;
+    margin-top: 15px !important;
+}
+
+.far-far-away {
+    position: absolute;
+    left: -100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    padding: 4px 0 !important;
+}
+
+
+#pomodoroWrapper {
+    border-bottom: .8px solid rgba(0,0,0, .19);
+    padding: 5px;
+    /* padding-bottom: 40px; */
+
+    transition: all .15s ease-in-out;
+    will-change: all;
+
+    opacity: 0;
+    transform: scale(0%);
+    height: 0;
+    margin-top: 0 !important;
+}
+
+#pomodoroWrapper h3 {
+    color: #FF4136;
+    margin: 15px;
+}
+
+#pomodoroControl {
+    margin-bottom: 25px;
+}
+
+#pomodoroControl button i {
+    padding: 3px 7px;
+}
+
+#pomodoroControl button {
+    padding: 0;
+    color: #FF851B;
+    border-color: #FF851B;
+}
+
+#pomodoroControl button:hover {
+    background: #FF851B;
+    color: white;
+}
+
+#listContainer {
+    width: 100%;
+    padding: 15px;
+}
+
+#list {
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#list > li {
+    padding: 10px;
+    border-bottom: .8px solid rgba(0,0,0, .19);
+    box-sizing: border-box;
+    font-size: .9em;
+    position: relative;
+}
+
+#list > li:last-child{
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+#list > li h1 {
+	max-width: 80%;
+    font-size: 1.2em;
+    color: #FF851B;
+	margin: 10px auto 0 auto !important;
+}
+
+#list .buttonArrow {
+    height: 24px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+}
+
+#list .buttonCheck {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    height: 30px;
+    width: 30px;
+    box-sizing: content-box;
+
+    padding: 0 !important;
+    border-radius: 50%;
+}
+
+.addedinfo {
+    opacity: 1;
+    transform: scale(100%);
+    height: auto;
+    margin-top: 15px;
+}
+
+.hidden {
+    opacity: 0 !important;
+    transform: scale(0%) !important;
+    height: 0 !important;
+    margin-top: 0 !important;
+}
