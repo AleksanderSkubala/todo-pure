@@ -31,56 +31,12 @@ body, html {
 }
 
 #mainWrapper {
-  width: 40vw;
+  width: 100vw !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
   text-align: center;
-
-  border: .5px solid rgba(0,0,0, .19);
-  border-radius: 5px;
-  box-shadow: 0 0 15px 0px rgba(0,0,0, .25);
-}
-
-@media screen and (max-width: 900px) {
-
-    #mainWrapper {
-        width: 60vw;
-    }
-}
-
-@media screen and (max-width: 400px) {
-
-    #mainWrapper {
-        width: 100vw !important;
-        min-height: 100vh;
-        margin: 0;
-    }
-
-    #inputWrapper {
-        display: block !important;
-    }
-
-    #buttonMore, .buttonAdd {
-        height: 60%;
-        margin-top: 15px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-
-    #mainWrapper {
-        width: 80vw;
-    }
-
-    #inputWrapper {
-        display: block !important;
-    }
-
-    #buttonMore, .buttonAdd, #buttonPomodoro {
-        height: 60%;
-        margin-top: 15px;
-    }
 }
 
 Header {
@@ -128,7 +84,7 @@ Button:hover {
 }
 
 #inputWrapper {
-    display: flex;
+    display: block !important;
     width: 100%;
 }
 
@@ -163,6 +119,8 @@ Button:hover {
 }
 
 #buttonMore {
+    height: 60%;
+    margin-top: 15px;
     padding: 0 !important;
     color: #39CCCC;
     border-color: #39CCCC;
@@ -174,6 +132,8 @@ Button:hover {
 }
 
 .buttonAdd {
+    height: 60%;
+    margin-top: 15px;
     padding: 0 !important;
     color: #2ECC40;
     border-color: #2ECC40;

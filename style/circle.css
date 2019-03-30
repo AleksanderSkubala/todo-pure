@@ -1,5 +1,6 @@
 #countdown {
   position: relative;
+  z-index: 10;
   bottom: 0;
   left: 0;
   margin: auto;
@@ -14,8 +15,11 @@
 #countdown-number {
   color: #FF4136;
   font-size: .6rem;
-  display: inline-block;
   line-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 svg {
