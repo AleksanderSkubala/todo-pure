@@ -8,7 +8,7 @@ If you want to check this app, you can:
 
 > Go [here](https://aleksanderskubala.github.io/todo-pure). 
 ### or 
-> Download install files in dir: todo-build => todo.apk is for android, todo-windows is for Windows.
+> Download install files for Android on branch - install.
 
 App is saving your todos in cache, so you can close winodw and then reopen with all todos.
 
